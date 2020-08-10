@@ -152,7 +152,13 @@ $(document).ready(function () {
         $(this).toggleClass('active')
     })
 
+    // 產品圖放大
 
+    if ($(window).width() > 991) {
+        $(".enlarge").addClass('zoom')
+    } else {
+        $(".enlarge").removeClass('zoom')
+    }
 
 });
 
