@@ -167,7 +167,7 @@ body, html {
   background-repeat: no-repeat;
 }
 .navbar-nav{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .navbar-nav a:hover{
   color:#f6b417 ;
@@ -338,8 +338,8 @@ rgba(255, 255, 255, 0) 3px;
 }
 .card:hover{
   bottom:10px;
-  -webkit-box-shadow: 0px 0px 5px $secondary;
-          box-shadow: 0px 0px 5px $secondary; 
+  -webkit-box-shadow: 0px 0px 5px $gray-400;
+          box-shadow: 0px 0px 5px $gray-400; 
 }
 .card-img-top{
   -webkit-transform: scale(1,1);
@@ -723,4 +723,42 @@ rgba(255, 255, 255, 0) 3px;
   }
 }
 
+//掃光
+  .ilogo {
+        position: relative;
+        float: left;
+        margin: 18px 0 0 5px;
+        overflow: hidden;
+        transition-duration: 5s;
+        // 動畫時間
+    }
 
+    .ilogo:before {
+        content: "";
+        position: absolute;
+        width: 1000px;
+        height: 20px;
+        // 光線寬
+        background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, .5), transparent);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: searchLights 1.2s ease-in 1s infinite;
+        -o-animation: searchLights 1.2s ease-in 1s infinite;
+        animation: searchLights 1.2s ease-in 1s infinite;
+      //  掃光速度
+    }
+
+    @keyframes searchLights {
+        0% {
+            left: -200px;
+            top: -300px;
+        }
+
+        100% {
+            left: -160px;
+            top: 800px;
+        }
+    }

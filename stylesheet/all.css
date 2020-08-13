@@ -10049,7 +10049,7 @@ body, html {
 }
 
 .navbar-nav {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .navbar-nav a:hover {
@@ -10235,8 +10235,8 @@ body, html {
 
 .card:hover {
   bottom: 10px;
-  -webkit-box-shadow: 0px 0px 5px #66AE46;
-  box-shadow: 0px 0px 5px #66AE46;
+  -webkit-box-shadow: 0px 0px 5px #ced4da;
+  box-shadow: 0px 0px 5px #ced4da;
 }
 
 .card-img-top {
@@ -10609,6 +10609,50 @@ body, html {
   }
   .ro-img:hover {
     border-radius: 50%;
+  }
+}
+
+.ilogo {
+  position: relative;
+  float: left;
+  margin: 18px 0 0 5px;
+  overflow: hidden;
+  -webkit-transition-duration: 5s;
+          transition-duration: 5s;
+}
+
+.ilogo:before {
+  content: "";
+  position: absolute;
+  width: 1000px;
+  height: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(rgba(255, 255, 255, 0.5)), to(transparent));
+  background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5), transparent);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: searchLights 1.2s ease-in 1s infinite;
+  animation: searchLights 1.2s ease-in 1s infinite;
+}
+
+@-webkit-keyframes searchLights {
+  0% {
+    left: -200px;
+    top: -300px;
+  }
+  100% {
+    left: -160px;
+    top: 800px;
+  }
+}
+
+@keyframes searchLights {
+  0% {
+    left: -200px;
+    top: -300px;
+  }
+  100% {
+    left: -160px;
+    top: 800px;
   }
 }
 /*# sourceMappingURL=all.css.map */
